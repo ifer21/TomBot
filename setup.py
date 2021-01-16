@@ -23,6 +23,6 @@ setup(name='TomBot',
       ],
       packages=['market_maker', 'market_maker.auth', 'market_maker.utils', 'market_maker.ws'],
       entry_points={
-          'console_scripts': ['marketmaker = market_maker:run']
+          'console_scripts': ['tombot = market_maker:run']
       }
       )
