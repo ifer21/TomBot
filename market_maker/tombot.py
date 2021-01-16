@@ -11,9 +11,9 @@ import signal
 import pandas as pd
 import numpy as np
 from builtins import any as b_any
-from market_maker import bitmex
-from market_maker.settings import settings
-from market_maker.utils import log, constants, errors, math, plot_utiles, telegram_bot, poscals
+from tom_bot import bitmex
+from tom_bot.settings import settings
+from tom_bot.utils import log, constants, errors, math, plot_utiles, telegram_bot, poscals
 from btmex_data import get_bitmex_data
 
 # Used for reloading the bot - saves modified times of key files
