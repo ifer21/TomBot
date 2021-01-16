@@ -8,7 +8,7 @@ __version__ = 'v1.5.1'
 
 
 def run():
-    parser = argparse.ArgumentParser(description='sample BitMEX market maker')
+    parser = argparse.ArgumentParser(description='BitMEX TOM Bot')
     parser.add_argument('command', nargs='?', help='Instrument symbol on BitMEX or "setup" for first-time config')
     args = parser.parse_args()
 
@@ -32,6 +32,6 @@ def copy_files():
 
     try:
         shutil.copytree(package_base, os.path.join(os.getcwd(), 'market_maker'))
-        print('Created marketmaker project.\n**** \nImportant!!!\nEdit settings.py before starting the bot.\n****')
+        print('Created TomBot project.\n**** \nImportant!!!\nEdit settings.py before starting the bot.\n****')
     except FileExistsError:
-        print('Market Maker project already exists!')
+        print('TomBot project already exists!')
