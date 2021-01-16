@@ -18,7 +18,7 @@ API_SECRET = ""
 # Target
 ########################################################################################################################
 
-# Instrument to market make on BitMEX.
+# Instrument to trade on BitMEX.
 SYMBOL = "XBTUSD"
 
 
@@ -74,6 +74,16 @@ MAX_POSITION = 10000
 # unexpected delta. Be careful.
 POST_ONLY = False
 
+# Max price allowed below trendline to make order
+TREND_PRICE_PERCEN = 0.0005  # If price is >+- 0.0005 when posting order, it will not be posted  (to avoid trend changes)
+# Order sizes
+BTW_TREND_PERCEN = 0.01 # Enter/exit % above/below support/resistance for resistance and support strategy
+BTW_ORDER_SIZE = 0.10 # % of portfolio to trade between resistance and support
+BREAK_ORDER_SIZE = 0.20 # % of portfolio to trade between resistance and support
+BREAK_TREND_PERCEN = 0.03 # Enter/exit % above/below support/resistance for breakout strategy
+BREAK_ORDER_SIZE = 0.20 # % of portfolio to trade in a breakout
+LEVERAGE = 20 # Leverage
+TRADING_LIMIT = 0.60 # max % of portfolio to be alocated (should be like a 2nd barrier now)
 ########################################################################################################################
 # Misc Behavior, Technicals
 ########################################################################################################################
@@ -85,12 +95,12 @@ DRY_RUN = False
 # How often to re-check and replace orders.
 # Generally, it's safe to make this short because we're fetching from websockets. But if too many
 # order amend/replaces are done, you may hit a ratelimit. If so, email BitMEX if you feel you need a higher limit.
-LOOP_INTERVAL = 5
+LOOP_INTERVAL = 10#5
 
 # Wait times between orders / errors
 API_REST_INTERVAL = 1
 API_ERROR_INTERVAL = 10
-TIMEOUT = 7
+TIMEOUT = 12
 
 # If we're doing a dry run, use these numbers for BTC balances
 DRY_BTC = 50
