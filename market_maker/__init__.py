@@ -31,7 +31,7 @@ def copy_files():
         shutil.copyfile(os.path.join(package_base, '_settings_base.py'), 'settings.py')
 
     try:
-        shutil.copytree(package_base, os.path.join(os.getcwd(), 'market_maker'))
+        shutil.copytree(package_base, os.path.join(os.getcwd(), 'm_maker'))
         print('Created TomBot project.\n**** \nImportant!!!\nEdit settings.py before starting the bot.\n****')
     except FileExistsError:
         print('TomBot project already exists!')
