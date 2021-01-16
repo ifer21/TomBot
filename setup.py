@@ -8,14 +8,14 @@ import market_maker
 here = dirname(__file__)
 
 
-setup(name='bitmex-market-maker',
+setup(name='TomBot',
       version=market_maker.__version__,
       description='Market making bot for BitMEX API',
-      url='https://github.com/BitMEX/sample-market-maker',
+      url='https://github.com/ifer21/TomBot',
       long_description=open(join(here, 'README.md')).read(),
       long_description_content_type='text/markdown',
       author='Samuel Reed',
-      author_email='sam@bitmex.com',
+      author_email='',
       install_requires=[
           'requests',
           'websocket-client',
